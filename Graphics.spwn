@@ -12,7 +12,7 @@ Graphics = {
         }else if Type == "Flat" {
             return $.add(obj {OBJ_ID: 468,X: PosX,Y: PosY,SCALING: Size,ROTATION:Rot})
         }else {
-            print("Error")
+            print("Error Unknown Hitbox Type "+Type)
         }
     }
 }
