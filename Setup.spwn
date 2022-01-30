@@ -1,0 +1,7 @@
+let Setup_Data = []
+
+Invis = 1g
+Invis.alpha(0)
+Setup_Data.push(Invis)
+
+return Setup_Data

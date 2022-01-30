@@ -1,0 +1,16 @@
+extract $
+extract obj_props
+Graphics = import "Graphics.spwn"
+
+Graphics.Hitbox("Block",15,15,1)
+
+Graphics.Hitbox("Straight",15,45,1,0)
+
+Graphics.Hitbox("Corner",15,75,1,0)
+
+Graphics.Hitbox("Flat",15,105,1,0)
+
+Graphics.Hitbox("Slope",15,105,1,0)
+
+Graphics.Hitbox("Flat-Slope",15,105,1,0)
+

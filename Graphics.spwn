@@ -1,0 +1,20 @@
+extract $
+extract obj_props
+
+Graphics = {
+    Hitbox : (Type="Block",PosX=0,PosY=0,Size=1,Rot=0) {
+        if Type == "Block"  {
+            return $.add(obj {OBJ_ID: 467,X: PosX,Y: PosY,SCALING: Size,})
+        }else if Type == "Straight" {
+            return $.add(obj {OBJ_ID: 471,X: PosX,Y: PosY,SCALING: Size,ROTATION:Rot})
+        }else if Type == "Corner" {
+            return $.add(obj {OBJ_ID: 469,X: PosX,Y: PosY,SCALING: Size,ROTATION:Rot})
+        }else if Type == "Flat" {
+            return $.add(obj {OBJ_ID: 468,X: PosX,Y: PosY,SCALING: Size,ROTATION:Rot})
+        }else {
+            print("Error")
+        }
+    }
+}
+
+return Graphics
