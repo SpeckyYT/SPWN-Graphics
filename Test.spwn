@@ -1,18 +1,12 @@
 extract $
-extract obj_props
 Graphics = import "Graphics.spwn"
 
 Height = 45
 
 Graphics.Hitbox("Block",15,Height,1)
-
-Graphics.Hitbox("Straight",45,Height,1,0)
-
-Graphics.Hitbox("Corner",75,Height,1,0)
-
-Graphics.Hitbox("Flat",105,Height,1,0)
-
-Graphics.Hitbox("Slope",135,Height,1,0)
-
-Graphics.Hitbox("Flat Slope",165,Height,1,0)
+Graphics.Hitbox("Straight",46,Height,1,0)
+Graphics.Hitbox("Corner",77,Height,1,0)
+Graphics.Hitbox("Flat",108,Height,1,0)
+Graphics.Hitbox("Slope",139,Height,1,0)
+Graphics.Hitbox("Flat Slope",170,Height,1,0)
 

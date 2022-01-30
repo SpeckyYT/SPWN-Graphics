@@ -18,6 +18,7 @@ Graphics = {
             print("Error Unknown Hitbox Type "+Type)
         }
     }
+    
 }
 
 return Graphics
