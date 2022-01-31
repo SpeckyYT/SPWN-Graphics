@@ -26,7 +26,7 @@ return {
         array_groups = match groups {
             @group: [groups],
             @array: groups,
-        } + (invis if invisible else [])
+        } + (invisible_group if invisible else [])
 
         return $.add(obj {
             OBJ_ID: hitbox_types[object_type],

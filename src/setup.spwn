@@ -1,8 +1,8 @@
 #[cache_output]
 
-invis = 1g
-invis.alpha(0)
+invisible_group = 1g
+invisible_group.alpha(0)
 
 return {
-    invis,
+    invisible_group,
 }
