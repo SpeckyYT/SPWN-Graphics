@@ -1,1 +1,1 @@
-"Steam.lnk" steam://rungameid/322170
+explorer "steam://rungameid/322170"

@@ -1,14 +1,16 @@
 extract $
-graphics = import "graphics.spwn"
+graphics = import "./src/lib.spwn" // `import graphics` would be enough when used as a library
 
 height = 45
+hitbox_types = graphics.hitbox_types.keys()
 
-graphics.hitbox("block",15,height,1)
-graphics.hitbox("straight",15,height,1)
-graphics.hitbox("corner",15,height,1)
-graphics.hitbox("flat",15,height,1)
-graphics.hitbox("slope",15,height,1)
-graphics.hitbox("flat-slope",15,height,1)
-
-
-
+for i in 0..hitbox_types.length {
+    graphics.hitbox(
+        object_type = hitbox_types[i],
+        x = i * 75 + 45,
+        y = height,
+        scaling = 1,
+        rotation = 0,
+        invisible = false,
+    )
+}

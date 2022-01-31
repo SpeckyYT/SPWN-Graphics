@@ -1,0 +1,41 @@
+#[cache_output]
+
+extract $
+extract obj_props
+extract import "setup.spwn"
+
+hitbox_types = {
+    "block":467,
+    "straight":471,
+    "corner":469,
+    "flat":468,
+    "slope":665,
+    "flat-slope":666,
+}
+
+return {
+    hitbox : (
+        object_type:@string = "block",
+        x:@number = 0,
+        y:@number = 0,
+        scaling:@number = 1,
+        rotation:@number = 0,
+        groups:@group|[@group] = [],
+        invisible:@bool = false,
+    ) {
+        array_groups = match groups {
+            @group: [groups],
+            @array: groups,
+        } + (invis if invisible else [])
+
+        return $.add(obj {
+            OBJ_ID: hitbox_types[object_type],
+            X: x,
+            Y: y,
+            SCALING: scaling,
+            ROTATION: rotation,
+            GROUPS: array_groups,
+        })
+    },
+    hitbox_types,
+}

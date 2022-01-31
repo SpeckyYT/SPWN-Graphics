@@ -1,0 +1,8 @@
+#[cache_output]
+
+invis = 1g
+invis.alpha(0)
+
+return {
+    invis,
+}

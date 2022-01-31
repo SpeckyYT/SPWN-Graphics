@@ -1,1 +1,1 @@
-spwn build Test.spwn
+spwn build test.spwn
