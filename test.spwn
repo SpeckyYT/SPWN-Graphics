@@ -1,12 +1,14 @@
 extract $
-Graphics = import "Graphics.spwn"
+graphics = import "graphics.spwn"
 
-Height = 45
+height = 45
 
-Graphics.Hitbox("Block",15,Height,1)
-Graphics.Hitbox("Straight",46,Height,1,0)
-Graphics.Hitbox("Corner",77,Height,1,0)
-Graphics.Hitbox("Flat",108,Height,1,0)
-Graphics.Hitbox("Slope",139,Height,1,0)
-Graphics.Hitbox("Flat Slope",170,Height,1,0)
+graphics.hitbox("block",15,height,1)
+graphics.hitbox("straight",15,height,1)
+graphics.hitbox("corner",15,height,1)
+graphics.hitbox("flat",15,height,1)
+graphics.hitbox("slope",15,height,1)
+graphics.hitbox("flat-slope",15,height,1)
+
+
 

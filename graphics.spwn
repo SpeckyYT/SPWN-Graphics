@@ -1,24 +1,19 @@
 extract $
 extract obj_props
-Graphics = {
-    Hitbox : (Type="Block",PosX=0,PosY=0,Size=1,Rot=0) {
-        if Type == "Block"  {
-            return $.add(obj {OBJ_ID: 467,X: PosX,Y: PosY,SCALING: Size})
-        }else if Type == "Straight" {
-            return $.add(obj {OBJ_ID: 471,X: PosX,Y: PosY,SCALING: Size,ROTATION:Rot})
-        }else if Type == "Corner" {
-            return $.add(obj {OBJ_ID: 469,X: PosX,Y: PosY,SCALING: Size,ROTATION:Rot})
-        }else if Type == "Flat" {
-            return $.add(obj {OBJ_ID: 468,X: PosX,Y: PosY,SCALING: Size,ROTATION:Rot})
-        }else if Type == "Slope" {
-            return $.add(obj {OBJ_ID: 665,X: PosX,Y: PosY,SCALING: Size,ROTATION:Rot})
-        }else if Type == "Flat Slope" {
-            return $.add(obj {OBJ_ID: 666,X: PosX,Y: PosY,SCALING: Size,ROTATION:Rot})
-        }else {
-            print("Error Unknown Hitbox Type "+Type)
-        }
-    }
-    
+
+let hitbox_obj = {
+    "block":467,
+    "straight":471,
+    "corner":469,
+    "flat":468,
+    "slope":665,
+    "flat-slope":666,
 }
 
-return Graphics
+let graphics = {
+    hitbox : (Type="block",pos_x=0,pos_y=0,size=1,rot=0) {
+        return $.add(obj {OBJ_ID: hitbox_obj[Type],X: pos_x,Y: pos_y,SCALING: size})
+    }
+}
+
+return graphics
